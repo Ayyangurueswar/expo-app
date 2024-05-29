@@ -33,8 +33,8 @@ export default function Index() {
   }, []);
   return (
     <>
-    <Pressable style={{marginTop:40, marginLeft:'auto', paddingHorizontal: 20, paddingVertical: 10}} onPress={exitApp}>
-      <Text>Exit app</Text>
+    <Pressable style={{marginTop:20, marginLeft:'auto', paddingHorizontal: 20, paddingVertical: 10}} onPress={exitApp}>
+      <Text>X</Text>
     </Pressable>
     <WebView 
     style={{flex: 1}}
