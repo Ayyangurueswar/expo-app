@@ -44,7 +44,7 @@ export default function Index() {
     allowsBackForwardNavigationGestures
     originWhitelist={['*']}
     startInLoadingState
-    renderLoading={() => <ActivityIndicator size='large' style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}/>}
+    renderLoading={() => <ActivityIndicator size='large' style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}/>}
     onShouldStartLoadWithRequest={(request)=>{
       if(request.url.includes('/contact')){
         const newURL = "http://tamilmani.in/p/contact.html"
