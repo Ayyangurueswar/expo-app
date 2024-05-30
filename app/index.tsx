@@ -1,6 +1,7 @@
 import WebView from "react-native-webview";
 import { useState, useEffect, useRef } from "react";
-import { Platform, BackHandler, Alert, Pressable, Text } from "react-native";
+import { Platform, BackHandler, Alert, Pressable, ActivityIndicator } from "react-native";
+import  AntDesign  from '@expo/vector-icons/AntDesign';
 
 export default function Index() {
   const [redirectState, setRedirectState] = useState('http://tamilmani.in');
@@ -34,7 +35,7 @@ export default function Index() {
   return (
     <>
     <Pressable style={{marginTop:20, marginLeft:'auto', paddingHorizontal: 20, paddingVertical: 10}} onPress={exitApp}>
-      <Text>X</Text>
+      <AntDesign name="closecircleo" size={24} color='black'/>
     </Pressable>
     <WebView 
     style={{flex: 1}}
@@ -42,6 +43,8 @@ export default function Index() {
     ref={webViewRef}
     allowsBackForwardNavigationGestures
     originWhitelist={['*']}
+    startInLoadingState
+    renderLoading={() => <ActivityIndicator size='large' style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}/>}
     onShouldStartLoadWithRequest={(request)=>{
       if(request.url.includes('/contact')){
         const newURL = "http://tamilmani.in/p/contact.html"
