@@ -20,6 +20,7 @@
         "foregroundImage": "./assets/images/icon-and-spl.png",
         "backgroundColor": "#ffffff"
       },
+      "icon": "./assets/images/icon-and-spl.png",
       "package": "com.ayyanguru.ayyanguru"
     },
     "web": {
